@@ -1,9 +1,7 @@
 use crate::Solution;
 
 #[derive(Default)]
-pub struct Day10 {
-
-}
+pub struct Day10 {}
 
 impl Solution for Day10 {
     type Part1Result = String;
@@ -11,7 +9,10 @@ impl Solution for Day10 {
 
     type Input = ();
 
-    fn parse<'a>(&mut self, _input: &'a str) -> Result<Self::Input, nom::Err<nom::error::Error<&'a str>>> {
+    fn parse<'a>(
+        &mut self,
+        _input: &'a str,
+    ) -> Result<Self::Input, nom::Err<nom::error::Error<&'a str>>> {
         todo!()
     }
 

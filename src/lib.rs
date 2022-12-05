@@ -11,7 +11,10 @@ pub trait Solution: Default {
     type Part1Result: Display;
     type Part2Result: Display;
 
-    fn parse<'a>(&mut self, input: &'a str) -> Result<Self::Input, nom::Err<nom::error::Error<&'a str>>>;
+    fn parse<'a>(
+        &mut self,
+        input: &'a str,
+    ) -> Result<Self::Input, nom::Err<nom::error::Error<&'a str>>>;
 
     fn run_part_1(&mut self, data: &Self::Input) -> Self::Part1Result;
 
