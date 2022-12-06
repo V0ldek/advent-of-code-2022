@@ -1,3 +1,5 @@
+use std::str::FromStr;
+
 use nom::{
     character::complete::{digit1, line_ending, multispace0},
     combinator::{map_res, recognize},
@@ -26,6 +28,6 @@ where
     terminated(separated_list0(line_ending, f), multispace0)
 }
 
-pub fn integer(input: &str) -> IResult<&str, u64> {
+pub fn integer<F: FromStr>(input: &str) -> IResult<&str, F> {
     map_res(recognize(digit1), str::parse)(input)
 }
