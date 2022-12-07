@@ -1,5 +1,3 @@
-use std::collections::HashSet;
-
 use crate::parsing::line_separated;
 use crate::Solution;
 use nom::{
@@ -8,6 +6,7 @@ use nom::{
     multi::many1,
     IResult,
 };
+use std::collections::HashSet;
 
 #[derive(Default)]
 pub struct Day3 {}

@@ -1,3 +1,7 @@
+use crate::{
+    parsing::{integer, line_separated},
+    Solution,
+};
 use nom::{
     branch::alt,
     bytes::complete::tag,
@@ -6,11 +10,6 @@ use nom::{
     multi::separated_list1,
     sequence::{delimited, preceded, tuple},
     IResult,
-};
-
-use crate::{
-    parsing::{integer, line_separated},
-    Solution,
 };
 
 #[derive(Default)]
@@ -91,7 +90,7 @@ pub struct Command {
 #[derive(PartialEq, Eq, Clone, Copy, Debug)]
 enum Order {
     Retain,
-    Reverse
+    Reverse,
 }
 
 impl Storage {

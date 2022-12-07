@@ -1,6 +1,5 @@
-use std::collections::HashMap;
-
 use crate::Solution;
+use std::collections::HashMap;
 
 #[derive(Default)]
 pub struct Day6 {}
@@ -74,11 +73,8 @@ impl CharSet {
         if self.counters[&c] == 1 {
             self.counters.remove(&c);
             self.unique_chars -= 1;
-        }
-        else {
-            self.counters.entry(c).and_modify(|x| {
-                *x -= 1
-            });
+        } else {
+            self.counters.entry(c).and_modify(|x| *x -= 1);
         }
     }
 

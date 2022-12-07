@@ -1,13 +1,12 @@
+use crate::{
+    parsing::{integer, line_separated},
+    Solution,
+};
 use nom::{
     character::complete::char as nom_char,
     combinator::{all_consuming, map},
     sequence::separated_pair,
     IResult,
-};
-
-use crate::{
-    parsing::{integer, line_separated},
-    Solution,
 };
 
 #[derive(Default)]
