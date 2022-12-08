@@ -1,4 +1,5 @@
 #![feature(is_some_and)]
+#![feature(map_try_insert)]
 mod days;
 pub(crate) mod iterators;
 pub(crate) mod parsing;
