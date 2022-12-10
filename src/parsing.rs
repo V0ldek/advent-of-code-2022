@@ -1,11 +1,11 @@
 use std::str::FromStr;
 
 use nom::{
-    character::complete::{digit1, line_ending, multispace0},
-    combinator::{map_res, recognize},
+    character::complete::{char, digit1, line_ending, multispace0},
+    combinator::{map_res, opt, recognize},
     error::ParseError,
     multi::separated_list0,
-    sequence::terminated,
+    sequence::{terminated, tuple},
     IResult, Parser,
 };
 
@@ -29,5 +29,5 @@ where
 }
 
 pub fn integer<F: FromStr>(input: &str) -> IResult<&str, F> {
-    map_res(recognize(digit1), str::parse)(input)
+    map_res(recognize(tuple((opt(char('-')), digit1))), str::parse)(input)
 }

@@ -94,10 +94,10 @@ fn run_on_file<S: Solution>(part: Part, input: &str) -> Result<()> {
         }
         Part::Both => {
             let result1 = solution.run_part_1(&data);
-            println!("Part 1: {result1}");
+            println!("Part 1:\n{result1}");
 
             let result2 = solution.run_part_2(&data);
-            println!("Part 2: {result2}");
+            println!("Part 2:\n{result2}");
         }
     }
 
