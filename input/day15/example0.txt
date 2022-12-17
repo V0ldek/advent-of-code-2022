@@ -1,0 +1,14 @@
+Sensor at x=2, y=2000008: closest beacon is at x=-2, y=2000005
+Sensor at x=9, y=2000006: closest beacon is at x=10, y=2000006
+Sensor at x=13, y=1999992: closest beacon is at x=15, y=1999993
+Sensor at x=12, y=2000004: closest beacon is at x=10, y=2000006
+Sensor at x=10, y=2000010: closest beacon is at x=10, y=2000006
+Sensor at x=14, y=2000007: closest beacon is at x=10, y=2000006
+Sensor at x=8, y=1999997: closest beacon is at x=2, y=2000000
+Sensor at x=2, y=1999990: closest beacon is at x=2, y=2000000
+Sensor at x=0, y=2000001: closest beacon is at x=2, y=2000000
+Sensor at x=20, y=2000004: closest beacon is at x=25, y=2000007
+Sensor at x=17, y=2000010: closest beacon is at x=21, y=2000012
+Sensor at x=16, y=1999997: closest beacon is at x=15, y=1999993
+Sensor at x=14, y=1999993: closest beacon is at x=15, y=1999993
+Sensor at x=20, y=1999991: closest beacon is at x=15, y=1999993
