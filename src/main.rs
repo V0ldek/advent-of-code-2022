@@ -2,6 +2,7 @@
 use advent_of_code_2022::*;
 use clap::{Parser, ValueEnum};
 use color_eyre::eyre::{Context, Result};
+use std::time::Instant;
 
 #[derive(Parser, Debug)]
 struct Args {
@@ -83,21 +84,36 @@ fn run_on_file<S: Solution>(part: Part, input: &str) -> Result<()> {
         .map_err(|e| e.map_input(|x| x.to_owned()))
         .wrap_err("error parsing input")?;
 
+    let start = Instant::now();
+
     match part {
         Part::One => {
             let result = solution.run_part_1(&data);
+            let duration = start.elapsed();
             println!("{result}");
+            println!("completed in {duration:?}");
         }
         Part::Two => {
             let result = solution.run_part_2(&data);
+            let duration = start.elapsed();
             println!("{result}");
+            println!("completed in {duration:?}");
         }
         Part::Both => {
             let result1 = solution.run_part_1(&data);
+            let after_part_1 = Instant::now();
+            let part_1_duration = after_part_1 - start;
             println!("Part 1:\n{result1}");
+            println!("completed in {part_1_duration:?}");
 
+            let before_part_2 = Instant::now();
             let result2 = solution.run_part_2(&data);
+            let after_part_2 = Instant::now();
+            let part_2_duration = after_part_2 - before_part_2;
             println!("Part 2:\n{result2}");
+            println!("completed in {part_2_duration:?}");
+
+            println!("total elapsed: {:?}", part_1_duration + part_2_duration);
         }
     }
 
