@@ -44,7 +44,7 @@ impl Solution for Day7 {
     fn run_part_2(&mut self, data: &Self::Input) -> Self::Part2Result {
         const TOTAL_SIZE: usize = 70_000_000;
         const SIZE_REQUIREMENT: usize = 30_000_000;
-        
+
         let tree = Tree::build_from_commands(data);
         let result = walk_dir_sizes(&tree);
         let available_space = TOTAL_SIZE - result.root_size;

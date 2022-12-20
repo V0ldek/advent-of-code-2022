@@ -28,6 +28,6 @@ where
     terminated(separated_list0(line_ending, f), multispace0)
 }
 
-pub fn integer<F: FromStr,>(input: &str) -> IResult<&str, F> {
+pub fn integer<F: FromStr>(input: &str) -> IResult<&str, F> {
     map_res(recognize(tuple((opt(char('-')), digit1))), str::parse)(input)
 }
